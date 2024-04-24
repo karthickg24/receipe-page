@@ -1,0 +1,239 @@
+@font-face {
+    font-family: 'YoungSerif';
+    src: url('assets/fonts/young-serif/YoungSerif-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('assets/fonts/outfit/Outfit-VariableFont_wght.ttf');
+}
+
+:root {
+    --ff-youngserif: 'YoungSerif', Arial, Helvetica, sans-serif;
+    --ff-outfit: 'Outfit', Arial, Helvetica, sans-serif;
+    --clr-eggshell: #F3E5D7;
+    --clr-white: #FFFFFF;
+    --clr-white-coffee: #E3DDD7;
+    --clr-brandy-red: #854632;
+    --clr-wenge-brown: #5F564D;
+    --clr-dark-raspberry: #7A284E;
+}
+
+
+
+/*CSS Resets*/
+
+*,*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/*General Styles*/
+
+body {
+    background-color: var(--clr-eggshell);
+    font-family: var(--ff-outfit);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    /* margin: 123px auto; */
+    margin-block: 123px;
+}
+
+.main-content, .heading, 
+.preparation, .ingredients, 
+.content-2,.content-3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.heading, .ingredients, .content-3, .content-2 {
+    gap: 24px;
+}
+
+.main-content {
+    background-color: var(--clr-white);
+    max-width: 736px;
+    padding: 40px;
+    border-radius: 24px;
+    gap: 40px;
+}
+
+.content-1 {
+    border-bottom: 1px solid var(--clr-white-coffee);
+}
+
+.content-1 > * {
+    margin-bottom: 32px;
+}
+
+h1 {
+    font-family: var(--ff-youngserif);
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+img {
+    border-radius: 12px;
+}
+
+.preparation {
+    padding: 28px;
+    background-color: #FFF7FB;
+    border-radius: 12px;
+    gap: 16px;
+}
+
+.preparation h3 {
+    color: var(--clr-dark-raspberry);
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.preparation ul {
+    color: var(--clr-wenge-brown);
+    margin-left: 21px;
+}
+
+.preparation ul li {
+    padding-left: 15px;
+}
+
+.preparation ul li:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.preparation ul li::marker {
+    color: var(--clr-dark-raspberry)
+}
+
+.preparation .strong-text {
+    font-weight: 700;
+}
+
+
+.ingredients h3 {
+    font-family: var(--ff-youngserif);
+    color: var(--clr-brandy-red);
+    font-size: 1.75rem;
+    font-weight: normal;
+}
+
+.ingredients ul {
+    color: var(--clr-wenge-brown);
+    margin-left: 24px;
+}
+
+
+.ingredients ul li {
+    padding-left: 15px;
+}
+
+.ingredients ul li:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.ingredients ul li::marker,
+.content-2 ol li::marker {
+    color: var(--clr-brandy-red);
+}
+
+.content-2 {
+    margin: 32px 0;
+    border-bottom: 1px solid var(--clr-white-coffee);
+}
+
+.content-2 h3,
+.content-3 h3 {
+    font-family: var(--ff-youngserif);
+    color: #854632;
+    font-size: 1.75rem;
+    font-weight: 400;
+}
+
+.content-2 ol {
+    color: var(--clr-wenge-brown);
+    margin-left: 21px;
+    margin-bottom: 32px;
+}
+
+.content-2 ol li {
+    padding-left: 15px;
+}
+
+.content-2 ol li:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.content-2 li span {
+    font-weight: 700;
+}
+
+.content-2 ol li::marker {
+    font-weight: 700;
+    color: var(--clr-brandy-red);
+}
+
+.content-3 {
+    gap: 24px;
+}
+
+.content-3 .nutrition-table .row {
+    display: flex;
+    width: 100%;
+    padding: 12px 32px;
+    gap: 16px;
+    border-bottom: 1px solid var(--clr-white-coffee);
+}
+
+.content-3 .nutrition-table .row:first-child {
+    padding-top: 0px;
+}
+
+.content-3 .nutrition-table .row:last-child {
+    padding-bottom: 0px;
+    border-bottom: none;
+}
+
+.content-3 .nutrition-table .cell {
+    flex: 1;
+    line-height: 1.5;
+}
+
+.nutrition-table .highlight {
+    color: var(--clr-brandy-red);
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 45.9375em) {
+    .container {
+        display: block;
+        margin: auto;
+    }
+    .banner img {
+        border-radius: 0;
+    }
+    .main-content {
+        background-color: var(--clr-white);
+        width: 100%;
+        padding: 0;
+        border-radius: 0;
+    }
+    .content {  
+        padding: 0 32px;
+    }
+}
+
+
