@@ -71,11 +71,7 @@ h2 {
     gap: 40px;
 }
 
-.content-1 {
-    border-bottom: 1px solid var(--clr-white-coffee);
-}
-
-.content-1>* {
+.content-1 > * {
     margin-bottom: 32px;
 }
 
@@ -132,7 +128,6 @@ ul, ol {
 
 .content-2 {
     margin: 32px 0;
-    border-bottom: 1px solid var(--clr-white-coffee);
 }
 
 .content-2 h2,
@@ -155,7 +150,6 @@ ul, ol {
     width: 100%;
     padding: 12px 32px;
     gap: 16px;
-    border-bottom: 1px solid var(--clr-white-coffee);
 }
 
 .nutrition-table .row:first-child {
@@ -169,7 +163,6 @@ ul, ol {
 
 .nutrition-table .cell {
     flex: 1;
-    line-height: 1.5;
 }
 
 .nutrition-table .highlight {
@@ -207,6 +200,7 @@ ul, ol {
     }
 }
 
+/*Utility Classes*/
 
 .fw-normal {
     font-weight: 400;
@@ -231,4 +225,8 @@ ul, ol {
 .d-flex-direction-column {
     display: flex;
     flex-direction: column;
+}
+
+.border-bottom {
+    border-bottom: 1px solid var(--clr-white-coffee);
 }
