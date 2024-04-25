@@ -17,6 +17,7 @@
     --clr-brandy-red: #854632;
     --clr-wenge-brown: #5F564D;
     --clr-dark-raspberry: #7A284E;
+    --clr-dark-charcoal: #312E2C;
 
     --fw-normal: 400;
     --fw-semi-bold: 600;
@@ -63,6 +64,7 @@ h2 {
 
 .main-content {
     background-color: var(--clr-white);
+    color: var(--clr-wenge-brown);
     max-width: 736px;
     padding: 40px;
     border-radius: 24px;
@@ -79,10 +81,27 @@ h2 {
 
 h1 {
     font-size: 2.5rem;
+    color: var(--clr-dark-charcoal);
 }
 
 img {
     border-radius: 12px;
+}
+
+ul, ol {
+    margin-left: 21px;
+}
+
+li {
+    padding-left: 15px;
+}
+
+ul li::marker {
+    font-size: small;
+}
+
+ul, ol {
+    gap: 8px;
 }
 
 .preparation {
@@ -97,44 +116,13 @@ img {
     font-size: 1.25rem;
 }
 
-.preparation ul {
-    color: var(--clr-wenge-brown);
-    margin-left: 21px;
-}
-
-.preparation ul li {
-    padding-left: 15px;
-}
-
-.preparation ul li:not(:last-child) {
-    margin-bottom: 8px;
-}
-
 .preparation ul li::marker {
     color: var(--clr-dark-raspberry)
 }
 
 .ingredients h2 {
-    font-family: var(--ff-youngserif);
     color: var(--clr-brandy-red);
     font-size: 1.75rem;
-}
-
-.ingredients ul {
-    color: var(--clr-wenge-brown);
-    margin-left: 24px;
-}
-
-.ingredients ul li {
-    padding-left: 15px;
-}
-
-.ingredients ul li:not(:last-child) {
-    margin-bottom: 8px;
-}
-
-ul li::marker {
-    font-size: small;
 }
 
 .ingredients ul li::marker,
@@ -154,17 +142,7 @@ ul li::marker {
 }
 
 .content-2 ol {
-    color: var(--clr-wenge-brown);
-    margin-left: 21px;
     margin-bottom: 32px;
-}
-
-.content-2 ol li {
-    padding-left: 15px;
-}
-
-.content-2 ol li:not(:last-child) {
-    margin-bottom: 8px;
 }
 
 .content-2 ol li::marker {
@@ -196,6 +174,15 @@ ul li::marker {
 
 .nutrition-table .highlight {
     color: var(--clr-brandy-red);
+}
+
+.attribution {
+    font-size: 0.6875rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
 
 @media only screen and (max-width: 45.9375em) {
@@ -244,13 +231,4 @@ ul li::marker {
 .d-flex-direction-column {
     display: flex;
     flex-direction: column;
-}
-
-.attribution {
-    font-size: 11px;
-    text-align: center;
-}
-
-.attribution a {
-    color: hsl(228, 45%, 44%);
 }
