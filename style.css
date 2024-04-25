@@ -26,7 +26,8 @@
 
 /*CSS Resets*/
 
-*,*::before,
+*,
+*::before,
 *::after {
     box-sizing: border-box;
 }
@@ -72,7 +73,7 @@ h2 {
     border-bottom: 1px solid var(--clr-white-coffee);
 }
 
-.content-1 > * {
+.content-1>* {
     margin-bottom: 32px;
 }
 
@@ -202,16 +203,19 @@ ul li::marker {
         display: block;
         margin: auto;
     }
+
     .banner img {
         border-radius: 0;
     }
+
     .main-content {
         background-color: var(--clr-white);
         width: 100%;
         padding: 0;
         border-radius: 0;
     }
-    .content {  
+
+    .content {
         padding: 0 32px;
     }
 }
@@ -240,4 +244,13 @@ ul li::marker {
 .d-flex-direction-column {
     display: flex;
     flex-direction: column;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
